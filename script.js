@@ -1,8 +1,8 @@
 //Grab the search query when the user submits the form.
 
 $(function(){
-	const form = document.querySelector(".search");
-	console.log(form);
+	var search = $(".search").val();
+	console.log(search);
 
 })
 
