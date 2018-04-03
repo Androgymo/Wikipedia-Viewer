@@ -5,18 +5,23 @@ $(function(){
 		event.preventDefault(); //Prevents the page from refreshing
 		var keyword = $(".keyword").val(); //stores the value entered into the search box
 
-		$.ajax({
+		$.ajax({ //pulling the api information
 	        type: "GET",
 	        url: "https://en.wikipedia.org/w/api.php?action=opensearch&search="+ keyword +"&format=json&callback=?",
 	        contentType: "application/json; charset=utf-8",
 	        async: false,
 	        dataType: "json",
 	        success: function (data, textStatus, jqXHR) {
-	        	var obj = JSON.stringify(data);
-	        	var info = JSON.parse(data);
-	            $(".results").html(info);
-	        },
-	        error: function (errorMessage) {
+	        	var obj = JSON.stringify(data); //turns object into a string
+	        	var info = JSON.parse(obj); // removes brackets and quotation marks
+
+	        	for(var i = 0; i < info.length; i++){
+	        		for(var j = 0; j < info[i].length; j++){
+	        			console.log($(".results").html(info)); 
+	        			}    		
+	        		}
+	        	},
+	        error: function (errorMessage){
 	        	console.log(ERROR);
 	        }
 
@@ -25,5 +30,4 @@ $(function(){
 })
 
 
-//Send this query to Wikipedia.
 //Display the results on the page.
