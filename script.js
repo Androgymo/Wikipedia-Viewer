@@ -13,14 +13,15 @@ $(function(){
 	        dataType: "json",
 	        success: function (data, textStatus, jqXHR) {
 	        	var obj = JSON.stringify(data); //turns object into a string
-	        	var info = JSON.parse(obj); // removes brackets and quotation marks
-
-	        	for(var i = 0; i < info.length; i++){
-	        		for(var j = 0; j < info[i].length; j++){
-	        			console.log($(".results").html(info)); 
-	        			}    		
-	        		}
-	        	},
+	        	var info = JSON.parse(obj);
+	        	 
+	       		for(var i = 1; i < info[1].length; i++){
+	       			for(var j = 1; j < info[i].length; j++)
+	       				var results = info[i][j];
+	       				console.log(results)
+	       			}
+	        },
+	        	
 	        error: function (errorMessage){
 	        	console.log(ERROR);
 	        }
