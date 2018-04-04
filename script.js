@@ -14,12 +14,24 @@ $(function(){
 	        success: function (data, textStatus, jqXHR) {
 	        	var obj = JSON.stringify(data); //turns object into a string
 	        	var info = JSON.parse(obj);
-	        	 
-	       		for(var i = 1; i < info[1].length; i++){
-	       			for(var j = 1; j < info[i].length; j++)
-	       				var results = info[i][j];
-	       				console.log(results)
+
+	        	var name = info[1];
+	        	var description = info[2]
+	        	var link = info[3]
+
+	        	$(".results").html("<div>" + name[i] + "</div><br>");
+	        	$("<br>").after(".results");
+	        	$(".results").append("<div>" + description[j] + "</div><br>");
+	        	$("<br>").after(".results");
+	        	        	 
+	       		for(var i = 0; i < name.length; i++){
+	       			for(var j = 0; j < description.length; j++){
+	       				if(i === j){
+	       					$(".results").html("<div>" + name[i] + " <br> " + description[j] + "</div>");
+	       					console.log(name[i] + " " + description[j]);
+	       				}
 	       			}
+				}
 	        },
 	        	
 	        error: function (errorMessage){
