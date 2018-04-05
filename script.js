@@ -28,6 +28,7 @@ $(function(){
 	       			for(var j = 0; j < description.length; j++){
 	       				if(i === j){
 	       					$(".results").html("<div>" + name[i] + " <br> " + description[j] + "</div>");
+	       					
 	       					console.log(name[i] + " " + description[j]);
 	       				}
 	       			}
