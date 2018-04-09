@@ -17,22 +17,18 @@ $(function(){
 
 	        	var name = info[1];
 	        	var description = info[2]
-	        	var link = info[3]
-
-	        	$(".results").html("<div>" + name[i] + "</div><br>");
-	        	$("<br>").after(".results");
-	        	$(".results").append("<div>" + description[j] + "</div><br>");
-	        	$("<br>").after(".results");
+	        	var link = info[3];
 	        	        	 
-	       		for(var i = 0; i < name.length; i++){
-	       			for(var j = 0; j < description.length; j++){
-	       				if(i === j){
-	       					$(".results").html("<div>" + name[i] + " <br> " + description[j] + "</div>");
+	       		for(var i = 1; i < name.length; i++){
+	       			for(var j = 1; j < description.length; j++){
+	       				for(var k = 1; k < link.length; k++){
+	       				if (i === j && i === k){
+	       					$(".results").append("<a href=" + link[k] + " " + "target='_blank' rel='reopener'><div class='info'>" + name[i] + "</a><br> " + description[j] + "</div><br>");
 	       					
-	       					console.log(name[i] + " " + description[j]);
-	       				}
-	       			}
-				}
+	     	       		}
+	     	       	}	
+			
+			}	}
 	        },
 	        	
 	        error: function (errorMessage){
