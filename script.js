@@ -20,15 +20,8 @@ $(function(){
 	        	var link = info[3];
 	        	        	 
 	       		for(var i = 1; i < name.length; i++){
-	       			for(var j = 1; j < description.length; j++){
-	       				for(var k = 1; k < link.length; k++){
-	       				if (i === j && i === k){
-	       					$(".results").append("<a href=" + link[k] + " " + "target='_blank' rel='reopener'><div class='info'>" + name[i] + "</a><br> " + description[j] + "</div><br>");
-	       					
-	     	       		}
-	     	       	}	
-			
-			}	}
+	       			$(".results").append("<a href=" + link[i] + " " + "target='_blank' rel='reopener'><div class='info'>" + name[i] + "</a><br> " + description[i] + "</div><br>");
+	       				}			
 	        },
 	        	
 	        error: function (errorMessage){

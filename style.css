@@ -3,3 +3,21 @@
 	font-size: 12px;
 }
 
+.flex-container {
+	width: -webkit-fill-available;
+    display: inherit;
+    margin: auto;
+    justify-content: center;
+    padding: 50px;
+    height: -webkit-fill-available;
+    align-items: center;
+    align-content: center;
+
+}
+
+}
+ input {
+ 	display: flex;
+    margin: auto;
+    padding: 2px;
+ }
