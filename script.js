@@ -19,9 +19,11 @@ $(function(){
 	        	var description = info[2]
 	        	var link = info[3];
 	        	        	 
+	        	$(".results").html('');
+	        	
 	       		for(var i = 1; i < name.length; i++){
 	       			$(".results").append("<a href=" + link[i] + " " + "target='_blank' rel='reopener'><div class='info'>" + name[i] + "</a><br> " + description[i] + "</div><br>");
-	       				}			
+	       				}
 	        },
 	        	
 	        error: function (errorMessage){
