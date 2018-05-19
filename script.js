@@ -34,13 +34,13 @@ $(function(){
 	        }		
 		});
 
-		//Runs the search when user press ENTER
+	});
+	//Runs the search when user press ENTER
 		$(".keyword").keypress(function(e){
 			if(e.which == 13) {
 				$("#search").click();
 			}
 		});
-	});
 
 });
 
