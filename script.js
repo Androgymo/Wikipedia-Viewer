@@ -22,25 +22,28 @@ $(function(){
 	        	$(".results").html('');
 
 	       		for(var i = 1; i < name.length; i++){
-	       			$(".results").append("<a href=" + link[i] + " " + "target='_blank' rel='reopener'><div class='info'>" + name[i] + "</a><br> " + description[i] + "</div><br>");
+	       			$(".results").append("<a href=" + link[i] + " " + "target='_blank' rel='reopener'><div class='info'>" + name[i] + "</a><br> " + description[i] + "</div>");
 	       				}
+
+	       			//clears the search bar everytime result are displayed
 	       			$(".keyword").val('');
 	        },
 	        	
 	        error: function (errorMessage){
 	        	console.log(ERROR);
-	        }
-
+	        }		
 		});
 
+		//Runs the search when user press ENTER
 		$(".keyword").keypress(function(e){
 			if(e.which == 13) {
 				$("#search").click();
 			}
-			
 		});
 	});
+
 });
+
 
 
 //Display the results on the page.
