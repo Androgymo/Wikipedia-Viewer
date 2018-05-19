@@ -20,19 +20,27 @@ $(function(){
 	        	var link = info[3];
 	        	        	 
 	        	$(".results").html('');
-	        	
+
 	       		for(var i = 1; i < name.length; i++){
 	       			$(".results").append("<a href=" + link[i] + " " + "target='_blank' rel='reopener'><div class='info'>" + name[i] + "</a><br> " + description[i] + "</div><br>");
 	       				}
+	       			$(".keyword").val('');
 	        },
 	        	
 	        error: function (errorMessage){
 	        	console.log(ERROR);
 	        }
 
-		})
-	})
-})
+		});
+
+		$(".keyword").keypress(function(e){
+			if(e.which == 13) {
+				$("#search").click();
+			}
+			
+		});
+	});
+});
 
 
 //Display the results on the page.
