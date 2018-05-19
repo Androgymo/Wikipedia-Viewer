@@ -13,7 +13,6 @@ p {
     font-size: 1.2rem;
     font-weight: 300;
     text-align: center;
-
 }
 
 .random {
@@ -22,30 +21,9 @@ p {
     padding-right: 10px;
 }
 
-/*div {
-    margin: auto;
-    width: 60%;
-    padding: 10px;
-}*/
-
 input {
     width: 300px;
     max-width: 300px;
     text-align: center;
 }
 
-
- @media (max-width: 400px) {
-
-  .flex-container{
-    margin: auto;
-    max-width: 80%;
-    padding: 20px;
-  }
-
-  .info {
-    width:80%
-
-  }
-
- }
